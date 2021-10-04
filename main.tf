@@ -1,0 +1,23 @@
+terraform {
+  required_providers {
+    null = {
+      source  = "hashicorp/null"
+      version = "3.1.0"
+    }
+  }
+}
+
+provider "null" {
+  # Configuration options
+}
+
+
+###### Set of Strings Example:
+
+resource "null_resource" "test" {
+  count = 400000
+
+  provisioner "local-exec" {
+    command = "echo ${count.index}"
+  }
+}
