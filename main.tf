@@ -12,8 +12,6 @@ provider "null" {
 }
 
 
-###### Set of Strings Example:
-
 resource "null_resource" "test" {
   count = 400000
 
