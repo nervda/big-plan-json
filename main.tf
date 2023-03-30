@@ -13,7 +13,7 @@ provider "null" {
 
 
 resource "null_resource" "test" {
-  count = 1
+  count = 14000
 
   provisioner "local-exec" {
     command = "echo ${count.index}"
